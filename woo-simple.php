@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  **/
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
-
     add_filter( 'product_type_selector', function ($types){
         unset( $types['grouped'] );
         unset( $types['external'] );
@@ -52,4 +51,5 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         remove_submenu_page( 'edit.php?post_type=product', 'product_attributes' );
 
     }, 999 );
+    
 }
